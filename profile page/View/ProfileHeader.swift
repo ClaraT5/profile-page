@@ -20,8 +20,25 @@ struct ProfileHeader: View {
                     .clipShape(Circle())
                     .clipped()
                     .padding()
-                Text("User Profile")
-                Spacer()
+                
+                
+                Text("User Profile").font(.system(size: 20).bold()).foregroundColor(.white)
+                    .padding(.bottom, 200)
+                
+                ZStack {
+                    Text("Username").font(.system(size: 20).bold()).foregroundColor(.white)
+                        .padding(.top, 200)
+                        .multilineTextAlignment(.center)
+                    
+                    Text("Password").font(.system(size: 20).bold()).foregroundColor(.white)
+                        .padding(.top, 400)
+                        .multilineTextAlignment(.center)
+                    
+                    Text("(Optional) Firebase info").font(.system(size: 20).bold()).foregroundColor(.white)
+                        .padding(.top, 600)
+                        .multilineTextAlignment(.center)
+                }
+               
             }
             Spacer()
         }.background(Color.blue)
