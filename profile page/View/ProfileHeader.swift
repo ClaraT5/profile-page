@@ -11,35 +11,33 @@ struct ProfileHeader: View {
     var body: some View {
         VStack {
             HStack {
-                
-                
                 Image("profile-icon")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 50, height: 50)
                     .clipShape(Circle())
                     .clipped()
-                    .padding()
+                    .padding(.bottom, 600)
                 
                 
                 Text("User Profile").font(.system(size: 20).bold()).foregroundColor(.white)
-                    .padding(.bottom, 200)
+                    .padding(.bottom, 600)
                 
-                ZStack {
+                VStack {
                     Text("Username").font(.system(size: 20).bold()).foregroundColor(.white)
-                        .padding(.top, 200)
+                        .padding()
                         .multilineTextAlignment(.center)
                     
                     Text("Password").font(.system(size: 20).bold()).foregroundColor(.white)
-                        .padding(.top, 400)
+                        .padding()
                         .multilineTextAlignment(.center)
                     
                     Text("(Optional) Firebase info").font(.system(size: 20).bold()).foregroundColor(.white)
-                        .padding(.top, 600)
+                        .padding()
                         .multilineTextAlignment(.center)
                 }
-               
-            }
+               Spacer()
+            }.background(Color.blue)
             Spacer()
         }.background(Color.blue)
         
