@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ProfileHeader: View {
+    
+    @State private var userUsername = "A"
+    @State private var userPassword = "B"
+    @State private var userFirebase = "C"
+    
     var body: some View {
         VStack {
             HStack {
@@ -27,14 +32,18 @@ struct ProfileHeader: View {
                     Text("Username").font(.system(size: 20).bold()).foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
+                    Text(self.userUsername).font(.system(size: 20).bold()).foregroundColor(.white)
+                    
                     
                     Text("Password").font(.system(size: 20).bold()).foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
+                    Text(self.userPassword).font(.system(size: 20).bold()).foregroundColor(.white)
                     
                     Text("(Optional) Firebase info").font(.system(size: 20).bold()).foregroundColor(.white)
                         .padding()
                         .multilineTextAlignment(.center)
+                    Text(self.userFirebase).font(.system(size: 20).bold()).foregroundColor(.white)
                 }
                Spacer()
             }.background(Color.blue)
