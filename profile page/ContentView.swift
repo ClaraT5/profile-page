@@ -36,31 +36,46 @@ struct ContentView: View {
                     .clipShape(Circle())
                     .clipped()
                     .padding(.bottom, 200)
+                    
                 
                 
-                Text("User Profile:").font(.system(size: 20).bold()).foregroundColor(.white)
+                Text("User Profile:").font(.title)
+                    .fontWeight(.black)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
                     .padding(.bottom, 200)
-                Text("(Name)").font(.system(size: 20).bold()).foregroundColor(.white)
+                    
+                Text("(Name)").font(.system(size: 20).bold())
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
                     .padding(.bottom, 200)
+                
                 
                 
                Spacer()
             }.background(Color(hex: 0x0b3d08))
             
             VStack {
-                Text("Username").font(.system(size: 20).bold()).foregroundColor(.black)
+                Text("Username").font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
                     .padding()
                 Text(self.userUsername).font(.system(size: 20)).foregroundColor(.black)
                     .multilineTextAlignment(.center)
                 
                 
                 
-                Text("Password").font(.system(size: 20).bold()).foregroundColor(.black)
+                Text("Password").font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
                     .padding()
                 Text(self.userPassword).font(.system(size: 20)).foregroundColor(.black)
                     .multilineTextAlignment(.center)
                 
-                Text("(Optional) Firebase info").font(.system(size: 20).bold()).foregroundColor(.black)
+                Text("(Optional) Firebase info").font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
                     .padding()
                     .multilineTextAlignment(.center)
                 Text(self.userFirebase).font(.system(size: 20)).foregroundColor(.black).multilineTextAlignment(.center)
