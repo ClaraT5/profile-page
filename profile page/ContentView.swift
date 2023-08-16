@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+extension Color {
+    init(hex: UInt, alpha: Double = 1) {
+        self.init(
+            .sRGB,
+            red: Double((hex >> 16) & 0xff) / 255,
+            green: Double((hex >> 08) & 0xff) / 255,
+            blue: Double((hex >> 00) & 0xff) / 255,
+            opacity: alpha
+        )
+    }
+}
+
 struct ContentView: View {
     
     @State private var userUsername = "AAAAAAAAAAAAAAAAAAA"
@@ -26,33 +38,35 @@ struct ContentView: View {
                     .padding(.bottom, 200)
                 
                 
-                Text("User Profile").font(.system(size: 20).bold()).foregroundColor(.white)
+                Text("User Profile:").font(.system(size: 20).bold()).foregroundColor(.white)
+                    .padding(.bottom, 200)
+                Text("(Name)").font(.system(size: 20).bold()).foregroundColor(.white)
                     .padding(.bottom, 200)
                 
                 
                Spacer()
-            }.background(Color.blue)
+            }.background(Color(hex: 0x0b3d08))
             
             VStack {
-                Text("Username").font(.system(size: 20).bold()).foregroundColor(.white)
+                Text("Username").font(.system(size: 20).bold()).foregroundColor(.black)
                     .padding()
-                Text(self.userUsername).font(.system(size: 20)).foregroundColor(.white)
+                Text(self.userUsername).font(.system(size: 20)).foregroundColor(.black)
                     .multilineTextAlignment(.center)
                 
                 
                 
-                Text("Password").font(.system(size: 20).bold()).foregroundColor(.white)
+                Text("Password").font(.system(size: 20).bold()).foregroundColor(.black)
                     .padding()
-                Text(self.userPassword).font(.system(size: 20)).foregroundColor(.white)
+                Text(self.userPassword).font(.system(size: 20)).foregroundColor(.black)
                     .multilineTextAlignment(.center)
                 
-                Text("(Optional) Firebase info").font(.system(size: 20).bold()).foregroundColor(.white)
+                Text("(Optional) Firebase info").font(.system(size: 20).bold()).foregroundColor(.black)
                     .padding()
                     .multilineTextAlignment(.center)
-                Text(self.userFirebase).font(.system(size: 20)).foregroundColor(.white).multilineTextAlignment(.center)
+                Text(self.userFirebase).font(.system(size: 20)).foregroundColor(.black).multilineTextAlignment(.center)
             }
             Spacer()
-        }.background(Color.blue)
+        }.background(Color(hex: 0xe3d4b0))
         
     }
 }
