@@ -29,7 +29,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
-                Image("profile-icon")
+                Image("Full-Circle")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 50, height: 50)
