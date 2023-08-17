@@ -21,15 +21,15 @@ extension Color {
 
 struct ContentView: View {
     
-    @State private var userUsername = "AAAAAAAAAAAAAAAAAAA"
-    @State private var userPassword = "BBBBBBBBBBBBBBBBBBB"
-    @State private var userFirebase = "CCCCCCCCCCCCCCCCCCC"
+    @State private var userUsername = "Kode With Klossy Scholar"
+    @State private var userPassword = "KWK2023bnp!*"
+    
     @State var title = "1"
     
     var body: some View {
         VStack {
             HStack {
-                Image("Full-Circle")
+                Image("Circle")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 80, height: 80)
@@ -73,12 +73,8 @@ struct ContentView: View {
                 Text(self.userPassword).font(.system(size: 20)).foregroundColor(.black)
                     .multilineTextAlignment(.center)
                 
-                Text("(Optional) Firebase info").font(.title)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.black)
-                    .padding()
-                    .multilineTextAlignment(.center)
-                Text(self.userFirebase).font(.system(size: 20)).foregroundColor(.black).multilineTextAlignment(.center)
+                
+                
             }
             Spacer()
         }.background(Color(hex: 0xe3d4b0))
